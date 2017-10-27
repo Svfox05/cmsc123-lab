@@ -78,20 +78,5 @@ public class LinkedList<E> implements Collection<E> {
     return new LinkedListIterator();
   }
    
-  class LinkedListIterator implements Iterator<E> {
-    Node current = head;
-    
-    public boolean hasNext() {
-      return (current != null);
-    }
-  
-    public E next() {
-      if(!(hasNext()))
-        throw new NoSuchElementException();
-      
-      E item = current.data;
-      current = current.next;
-      return item;
-    }
-  }
+
 }
